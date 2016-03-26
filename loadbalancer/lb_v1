@@ -1,0 +1,27 @@
+{
+   "kind": "Service",
+   "apiVersion": "v1",
+   "metadata": {
+       "name": "video1-service"
+   },
+   "spec": {
+       "selector": {
+           "app": "video1"
+       },
+       "ports": [
+           {
+               "name": "outgoing",
+               "protocol": "TCP",
+               "port": 8180,
+               "targetPort": 8180
+           },
+           {
+               "name": "incoming",
+               "protocol": "TCP",
+               "port": 8182,
+               "targetPort": 8182
+           }
+       ],
+"type": "LoadBalancer"
+   }
+}
