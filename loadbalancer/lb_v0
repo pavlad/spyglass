@@ -1,0 +1,27 @@
+{
+   "kind": "Service",
+   "apiVersion": "v1",
+   "metadata": {
+       "name": "video0-service"
+   },
+   "spec": {
+       "selector": {
+           "app": "video0"
+       },
+       "ports": [
+           {
+               "name": "outgoing",
+               "protocol": "TCP",
+               "port": 8080,
+               "targetPort": 8080
+           },
+           {
+               "name": "incoming",
+               "protocol": "TCP",
+               "port": 8082,
+               "targetPort": 8082
+           }
+       ],
+"type": "LoadBalancer"
+   }
+}
