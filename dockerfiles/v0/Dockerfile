@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:0.10
 EXPOSE 8080 8082
 COPY video0.js /video0.js
 RUN npm install ws
